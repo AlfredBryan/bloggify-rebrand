@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap');
+
+.home-main {
+    position: relative;
+    text-align: center
+}
+
+.bg_img {
+    width: 100%;
+    height: 10%;
+}
+
+.bg_header {
+    position: absolute;
+    color: white;
+    top: 45%;
+    left: 24%;
+}
+
+.bg_header p {
+    font-weight: 100;
+}
+
+.bg_header h1 {
+    font-size: 5em;
+    font-family: 'Modak', cursive;
+}
+
+.blog_area {
+    margin-left: 1em !important
+}
+
+.news_title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.blogs {
+    margin: 2em 0em 2em 0em;
+    width: 20em !important;
+    height: 30em;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .bg_header h1 {
+        font-size: 1em;
+    }
+
+    .bg_header p {
+        font-size: 0.7em;
+        font-weight: 100;
+    }
+}
