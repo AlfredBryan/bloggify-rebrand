@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import moment from "moment";
 import axios from "axios";
 
 import "./Home.css";
 import Spinner from "../hoc/Spinner";
+import Footer from "../Footer/Footer";
 
 class Home extends Component {
   constructor(props) {
@@ -44,22 +46,45 @@ class Home extends Component {
                 <h1>Welcome to Bloggify</h1>
               </div>
             </div>
-            <div className="container-fluid">
-              <div className="row blog_area">
+            <div className="news_area">
+              <h2>News Splash</h2>
+              <hr className="style2" />
+            </div>
+            <div className="container-fluid blogs">
+              <div className="row">
                 {post.map(news => (
-                  <div className="col-md-4  blogs">
-                    <img
-                      style={{ width: "25em", height: "15em" }}
-                      className="news_img"
-                      src={news.image}
-                      alt=""
-                    />
-                    <div className="news_title">{news.title}</div>
-                    <div>{news.post.substring(0, 55)}...</div>
+                  <div className="col-md-4 mb-5">
+                    <div className="card h-100">
+                      <img
+                        style={{ width: "28.3em", height: "15em" }}
+                        src={news.image}
+                        alt=""
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{news.title}</h5>
+                        <p className="card-text">
+                          {news.post.substring(0, 150)}...
+                        </p>
+                      </div>
+                      <div className="card-footer row">
+                        <div className="col-md-8">
+                          <h6>{news.author}</h6>
+                          <p>
+                            <small>{moment(news.date).format("llll")}</small>
+                          </p>
+                        </div>
+                        <div className="col-md-4">
+                          <a href="#" class="btn btn-success btn-sm">
+                            Read More >>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
+            <Footer />
           </React.Fragment>
         )}
       </React.Fragment>
