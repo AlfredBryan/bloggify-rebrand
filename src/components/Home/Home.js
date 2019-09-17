@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Home.css";
 import Spinner from "../hoc/Spinner";
 import Footer from "../Footer/Footer";
+import CustomNavbar from "../Navbar/CustomNavbar";
 
 class Home extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Home extends Component {
           <Spinner />
         ) : (
           <React.Fragment>
+            <CustomNavbar />
             <div className="home-main">
               <img
                 className="bg_img"
@@ -56,7 +58,7 @@ class Home extends Component {
                   <div className="col-md-4 mb-5">
                     <div className="card h-100">
                       <img
-                        style={{ width: "28.3em", height: "15em" }}
+                        style={{ width: "28em", height: "15em" }}
                         src={news.image}
                         alt=""
                       />

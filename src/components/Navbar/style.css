@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+
+.nav-title {
+    flex-grow: 1;
+    font-family: 'Saira Extra Condensed', sans-serif !important;
+}
+
+.nav-root {
+    flex-grow: 1;
+}
+
+.nav-button {
+    margin-left: -12;
+    margin-right: 20;
+}
+
+.nav-main {
+    background-color: rgb(9, 155, 21) !important;
+}
+
+.nav-component {
+    font-family: 'Saira Stencil One', cursive !important;
+}
