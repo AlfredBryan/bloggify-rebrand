@@ -6,6 +6,7 @@ import "./Home.css";
 import Spinner from "../hoc/Spinner";
 import Footer from "../Footer/Footer";
 import CustomNavbar from "../Navbar/CustomNavbar";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
@@ -55,7 +56,7 @@ class Home extends Component {
             <div className="container-fluid blogs">
               <div className="row">
                 {post.map(news => (
-                  <div className="col-md-4 mb-5">
+                  <div key={news._id} className="col-md-4 mb-5">
                     <div className="card h-100">
                       <img
                         style={{ width: "28em", height: "15em" }}
@@ -76,9 +77,12 @@ class Home extends Component {
                           </p>
                         </div>
                         <div className="col-md-4">
-                          <a href="#" class="btn btn-success btn-sm">
+                          <Link
+                            to={`/view_post/${news._id}`}
+                            class="btn btn-success btn-sm"
+                          >
                             Read More >>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
