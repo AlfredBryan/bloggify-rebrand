@@ -25,7 +25,10 @@ class CustomNavbar extends Component {
                 Bloggify
               </Link>
             </Typography>
-            <Link style={{ textDecoration: "none", color: "white" }}>
+            <Link
+              to="/create_post"
+              style={{ textDecoration: "none", color: "white" }}
+            >
               <Button className="nav-component" color="inherit">
                 Add Post
               </Button>
